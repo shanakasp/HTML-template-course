@@ -263,22 +263,6 @@ h1 {
 .about-card-container {
   display: flex;
   align-items: flex-start;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* Content styling */
-.about-card-content {
-  font-size: 16px;
-  color: #555;
-  margin-top: 5px;
-  padding: 20px;
-}
-
-/* Flex layout for the cards */
-.about-card-container {
-  display: flex;
-  align-items: flex-start;
 }
 
 /* Responsive adjustments for smaller screens */
@@ -292,5 +276,124 @@ h1 {
   .about-card-number {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+}
+
+/* Course Section */
+#course {
+  padding: 60px 30px; /* Increased padding for the entire section */
+  background-color: #f5f5f5;
+}
+
+#course .title .main-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px; /* More space below the main title */
+  text-align: center;
+  color: #333;
+}
+
+#course .course-enroll-btn button {
+  padding: 12px 24px; /* Increased button padding */
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px; /* Increased font size */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#course .course-enroll-btn button:hover {
+  background-color: #2c7abf;
+}
+
+.course-cards {
+  background-color: white;
+  padding: 25px; /* Increased padding inside each card */
+  border-radius: 10px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  margin-bottom: 30px; /* Increased margin between cards */
+}
+
+.course-cards:hover {
+  transform: translateY(-8px); /* More lift on hover */
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+}
+
+.course-cards .title {
+  font-size: 22px; /* Slightly larger title */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px; /* Increased space between title and content */
+}
+
+.course-cards .time {
+  font-size: 16px; /* Slightly larger time text */
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.course-cards .description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px; /* More space below the description */
+}
+
+.course-cards .course-addtocart-enroll-btn {
+  font-size: 16px;
+  color: #3498db;
+  cursor: pointer;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Space between the button and the next content */
+}
+
+.course-cards .course-addtocart-enroll-btn:hover {
+  color: #2c7abf;
+}
+
+/* Icon for Add to Cart */
+.course-cards .course-addtocart-enroll-btn:before {
+  content: "\f217"; /* Font Awesome shopping cart icon code */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+/* Icon for Enrolled Students */
+.course-cards .course-enolled-count:before {
+  content: "\f19d"; /* Font Awesome users icon code */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+.course-cards .course-enolled-count {
+  font-size: 15px; /* Slightly larger font */
+  color: #888;
+}
+
+/* Grid layout for course cards */
+#course .course-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 cards per row */
+  gap: 40px; /* Increased gap between the cards */
+  padding: 0 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+  #course .course-cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  #course .course-cards-container {
+    grid-template-columns: 1fr; /* 1 card per row */
   }
 }
