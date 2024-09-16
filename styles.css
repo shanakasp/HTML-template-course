@@ -114,3 +114,81 @@ h1 {
   color: rgb(84, 243, 103);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Container for the cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card styles */
+.card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling for material icons */
+.card-icon {
+  font-size: 50px; /* Icon size */
+  margin-right: 15px;
+  color: #555; /* Icon color */
+}
+
+/* Card title styling */
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Card subtitle styling */
+.card-content p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex-direction: column; /* Stack icon and content vertically on small screens */
+    text-align: center;
+  }
+
+  .card-icon {
+    margin: 0 0 10px 0;
+    font-size: 40px; /* Slightly reduce icon size for small screens */
+  }
+}
