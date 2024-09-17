@@ -1,4 +1,4 @@
-UDemy HTML Template Course
+Udemy HTML Template Course
 
 https://www.udemy.com/course/design-a-website-template-using-html5-css3/learn/lecture/43935960#overview
 
